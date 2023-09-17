@@ -7,11 +7,30 @@ function generateTopicsToMembers () {
         showResultTemplate: document.querySelector('.show-result'),
         buttonClean: document.querySelector('.clean'),
         allInputs: document.querySelectorAll('.large'),
+        errorContainer: document.querySelector('.error'),
 
         initiate() {
             this.listenToSubmit();
             this.clearInputs();
             this.hideResult();
+
+            this.allInputs.forEach((input) => {
+                input.addEventListener('click', () => {
+                    this.hideErrorMessage();
+                })
+            })
+        },
+
+        hideErrorMessage() {
+            this.errorContainer.style.display = 'none'
+        },
+
+        showErrorMessage() {
+            this.errorContainer.style.display = 'block'
+
+            setTimeout(() => {
+                this.hideErrorMessage();
+            }, 3000)
         },
 
         hideResult() {
@@ -26,6 +45,19 @@ function generateTopicsToMembers () {
             this.resultTemplate.innerHTML = ''; // Clear the inner HTML of resultTemplate
         },
 
+        areAllInputsFilled(inputs) {
+            let allFilled = true;
+
+            inputs.forEach(input => {
+                if (!input.value) {
+                    allFilled = false;
+                    return;
+                }
+            });
+
+            return allFilled;
+        },
+
         listenToSubmit() {
             this.buttonGenerate.addEventListener('click', e =>  {
                 e.preventDefault();
@@ -34,6 +66,15 @@ function generateTopicsToMembers () {
 
                 const arrayOfNames = this.collectInput(this.inputsNames);
                 const arrayOfTopics = this.collectInput(this.inputsTopics);
+
+                if (!this.areAllInputsFilled(this.allInputs)) {
+                    setTimeout(() => {
+                        this.showErrorMessage();
+                    }, 500)
+
+                    return;
+                }
+
                 const reshuffledArray = this.throwBackArrays(arrayOfNames, arrayOfTopics);
                 const [arrayNames, arrayTopic] = reshuffledArray;
 

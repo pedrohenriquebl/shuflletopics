@@ -41,6 +41,18 @@ form h4 {
     font-weight: 400;
 }
 
+form .error {
+    display: none;
+    opacity: 1;
+    width: 100%;
+    border: 1px solid var(--tertiary__color);
+    border-radius: 3px;
+    padding: 10px;
+    background: var(--primary__color);
+    margin-bottom: 10px;
+    transition: opacity ease-in 500ms;
+}
+
 article form {
     background-color: white;
     font-size: 14px;
