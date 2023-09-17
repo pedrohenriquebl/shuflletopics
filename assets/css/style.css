@@ -13,6 +13,7 @@
 }
 
 body {
+    padding: 0 15px;
     background-color: var(--primary__color);
 }
 
@@ -43,6 +44,7 @@ form h4 {
 
 form .error {
     display: none;
+    height: 38px;
     opacity: 1;
     width: 100%;
     border: 1px solid var(--tertiary__color);
@@ -50,7 +52,12 @@ form .error {
     padding: 10px;
     background: var(--primary__color);
     margin-bottom: 10px;
-    transition: opacity ease-in 500ms;
+    transition: showErrorMessage ease-in 500ms;
+}
+
+@keyframes showErrorMessage {
+    0% {opacity: 0; height: 0;}
+    100% {opacity: 1; height: 38px;}
 }
 
 article form {
@@ -97,6 +104,7 @@ article form .call-to-action {
     vertical-align: middle;
     text-align: right;
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
