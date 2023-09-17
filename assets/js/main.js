@@ -57,13 +57,13 @@ function generateTopicsToMembers () {
         },
 
         collectInput(allInputs) {
-            const arraySubject  = []
+            const arrSubject = [];
 
-            for(let i = 0; i < allInputs.length; i++) {
-                arraySubject.push(allInputs[i])
+            for (let i = 0; i < allInputs.length; i++) {
+                arrSubject.push(allInputs[i].value);
             }
 
-            return arraySubject;
+            return arrSubject;
         },
 
         throwBackArrays (arrayName, arrayTopic) {
