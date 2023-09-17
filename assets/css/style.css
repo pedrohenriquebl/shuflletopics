@@ -142,3 +142,17 @@ article form .call-to-action button:hover {
 .result li h1,span {
     text-transform: uppercase;
 }
+
+.initial-step {
+    opacity: 1;
+}
+
+.second-step.hidden {
+    opacity: 0;
+}
+
+.initial-step.hidden, .second-step.hidden {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+}

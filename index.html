@@ -13,100 +13,107 @@
         <span class="space-container"></span>
         <article>
             <form>
-                <div class="title">
-                    <h2>Generate Presentations</h2>
-                </div>
-                <div class="error">
-                    <span><i class="fa-solid fa-hand-dots"></i></span>
-                    <span>Please fill in all inputs.</span>
-                </div>
-                <h4>Team Names:</h4>
-                <div class="element-input">
-                    <label class="title"></label>
-                    <div class="content">
-                        <label for="name1"><i class="fa-solid fa-heart"></i></label>
-                        <input class="large names"
-                               minlength="1"
-                               type="text"
-                               id="name1"
-                               name="name1"
-                               placeholder="Insert your name" required/>
-                    </div>
-                </div>
-                <div class="element-input">
-                    <label class="title"></label>
-                    <div class="content">
-                        <label for="name2"><i class="fa-solid fa-heart"></i></label>
-                        <input class="large names"
-                               minlength="1"
-                               type="text"
-                               id="name2"
-                               name="name2"
-                               placeholder="Insert your name" required/>
-                    </div>
-                </div>
-                <div class="element-input">
-                    <label class="title"></label>
-                    <div class="content">
-                        <label for="name3"><i class="fa-solid fa-heart"></i></label>
-                        <input class="large names"
-                               minlength="1"
-                               type="text"
-                               id="name3"
-                               name="name3"
-                               placeholder="Insert your name" required/>
-                    </div>
-                </div>
-                <div class="title">
-                    <h2>Topics</h2>
-                </div>
-                <h4>Team Topics:</h4>
-                <div class="element-input">
-                    <label class="title"></label>
-                    <div class="content">
-                        <label for="topic1"><i class="fa-regular fa-heart"></i></label>
-                        <input class="large topics"
-                               minlength="1"
-                               type="text"
-                               id="topic1"
-                               name="topic1"
-                               placeholder="Insert your topic" required/>
-                    </div>
-                </div>
-                <div class="element-input">
-                    <label class="title"></label>
-                    <div class="content">
-                        <label for="topic2"><i class="fa-regular fa-heart"></i></label>
-                        <input class="large topics"
-                               minlength="1"
-                               type="text"
-                               id="topic2"
-                               name="topic2"
-                               placeholder="Insert your topic" required/>
-                    </div>
-                </div>
-                <div class="element-input">
-                    <label class="title"></label>
-                    <div class="content">
-                        <label for="topic3"><i class="fa-regular fa-heart"></i></label>
-                        <input class="large topics"
-                               minlength="1"
-                               type="text"
-                               id="topic3"
-                               name="topic3"
-                               placeholder="Insert your topic" required/>
-                    </div>
-                </div>
-                <div class="show-result">
+                <div class="initial-step">
                     <div class="title">
-                        <h2>Result</h2>
+                        <h2>Generate Presentations</h2>
                     </div>
-                    <h4>Team order:</h4>
-                    <ul class="result"></ul>
+                    <div class="error">
+                        <span><i class="fa-solid fa-hand-dots"></i></span>
+                        <span>Please fill in all inputs.</span>
+                    </div>
+                    <h4>Team Names:</h4>
+                    <div class="element-input">
+                        <label class="title"></label>
+                        <div class="content">
+                            <label for="name1"><i class="fa-solid fa-heart"></i></label>
+                            <input class="large names"
+                                   minlength="1"
+                                   type="text"
+                                   id="name1"
+                                   name="name1"
+                                   placeholder="Insert your name" required/>
+                        </div>
+                    </div>
+                    <div class="element-input">
+                        <label class="title"></label>
+                        <div class="content">
+                            <label for="name2"><i class="fa-solid fa-heart"></i></label>
+                            <input class="large names"
+                                   minlength="1"
+                                   type="text"
+                                   id="name2"
+                                   name="name2"
+                                   placeholder="Insert your name" required/>
+                        </div>
+                    </div>
+                    <div class="element-input">
+                        <label class="title"></label>
+                        <div class="content">
+                            <label for="name3"><i class="fa-solid fa-heart"></i></label>
+                            <input class="large names"
+                                   minlength="1"
+                                   type="text"
+                                   id="name3"
+                                   name="name3"
+                                   placeholder="Insert your name" required/>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <h2>Topics</h2>
+                    </div>
+                    <h4>Team Topics:</h4>
+                    <div class="element-input">
+                        <label class="title"></label>
+                        <div class="content">
+                            <label for="topic1"><i class="fa-regular fa-heart"></i></label>
+                            <input class="large topics"
+                                   minlength="1"
+                                   type="text"
+                                   id="topic1"
+                                   name="topic1"
+                                   placeholder="Insert your topic" required/>
+                        </div>
+                    </div>
+                    <div class="element-input">
+                        <label class="title"></label>
+                        <div class="content">
+                            <label for="topic2"><i class="fa-regular fa-heart"></i></label>
+                            <input class="large topics"
+                                   minlength="1"
+                                   type="text"
+                                   id="topic2"
+                                   name="topic2"
+                                   placeholder="Insert your topic" required/>
+                        </div>
+                    </div>
+                    <div class="element-input">
+                        <label class="title"></label>
+                        <div class="content">
+                            <label for="topic3"><i class="fa-regular fa-heart"></i></label>
+                            <input class="large topics"
+                                   minlength="1"
+                                   type="text"
+                                   id="topic3"
+                                   name="topic3"
+                                   placeholder="Insert your topic" required/>
+                        </div>
+                    </div>
+                    <div class="call-to-action">
+                        <button class="clean" type="button">Clear</button>
+                        <button class="generate" type="submit">Generate</button>
+                    </div>
                 </div>
-                <div class="call-to-action">
-                    <button class="clean" type="button">Clear</button>
-                    <button class="generate" type="submit">Generate</button>
+                <div class="second-step">
+                    <div class="show-result">
+                        <div class="title">
+                            <h2>Result</h2>
+                        </div>
+                        <h4>Team order:</h4>
+                        <ul class="result"></ul>
+                    </div>
+                    <div class="call-to-action">
+                        <button class="back" type="button">Back</button>
+                    </div>
                 </div>
             </form>
         </article>

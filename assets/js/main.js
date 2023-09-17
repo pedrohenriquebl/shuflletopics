@@ -8,6 +8,9 @@ function generateTopicsToMembers () {
         buttonClean: document.querySelector('.clean'),
         allInputs: document.querySelectorAll('.large'),
         errorContainer: document.querySelector('.error'),
+        firstStepContainer: document.querySelector('.initial-step'),
+        secondStepContainer: document.querySelector('.second-step'),
+        backButton: document.querySelector('.back'),
 
         initiate() {
             this.listenToSubmit();
@@ -34,11 +37,22 @@ function generateTopicsToMembers () {
         },
 
         hideResult() {
-           this.showResultTemplate.style.display = 'none';
+            this.showResultTemplate.style.display = 'none';
+            this.secondStepContainer.classList.add('hidden');
         },
 
         showResult() {
+            this.firstStepContainer.classList.add('hidden');
+            this.secondStepContainer.classList.remove('hidden');
             this.showResultTemplate.style.display = 'block';
+            this.backToFirstStep();
+        },
+
+        backToFirstStep() {
+            this.backButton.addEventListener('click', () => {
+                this.firstStepContainer.classList.remove('hidden');
+                this.secondStepContainer.classList.add('hidden');
+            })
         },
 
         clearResults() {
